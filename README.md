@@ -42,7 +42,7 @@ This project uses **OpenCV** and **NumPy** to detect colored shapes in images an
 - Computes approximate 3D position (X, Y, Z) of detected shapes.
 - Displays coordinates on output.
 
-Controls
+**Controls**
 Press q while the video window is active to quit.
 
 
