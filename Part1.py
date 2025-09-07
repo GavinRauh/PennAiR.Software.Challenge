@@ -44,5 +44,4 @@ for color, (lower, upper) in color_ranges.items():
 
 # Show result
 cv2.imshow("Detected Shapes", output)
-cv2.waitKey(0)
 cv2.destroyAllWindows()
