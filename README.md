@@ -1,6 +1,6 @@
 # Shape and Color Detection with OpenCV
 
-This project uses **OpenCV** and **NumPy** to detect colored shapes in images and videos, find their centroids, and also compute approximate 3D coordinates from camera parameters.
+This project uses **OpenCV** and **NumPy** to detect colored shapes in images and videos, find their centroids, and also compute approximate 3D coordinates from given camera parameters.
 
 ## Repository Structure
 
@@ -19,48 +19,30 @@ This project uses **OpenCV** and **NumPy** to detect colored shapes in images an
 **Usage**
 
 1. Static Shape Detection (Part1)
-python Part1.py
-
-
-Loads PennAir 2024 App Static.png.
-
-Detects shapes of colors: red, yellow, green, blue, pink.
-
-Displays contours and centroids.
+- python Part1.py
+- Loads PennAir 2024 App Static.png.
+- Detects shapes of colors: red, yellow, green, blue, pink.
+- Displays contours and centroids.
 
 2. Dynamic Shape Detection (Part2)
-python Part2.py
-
-
-Loads PennAir 2024 App Dynamic.mp4.
-
-Detects colored shapes frame by frame.
-
-Displays bounding contours and centroids in real-time.
+- python Part2.py
+- Loads PennAir 2024 App Dynamic.mp4.
+- Detects colored shapes frame by frame.
+- Displays bounding contours and centroids
 
 3. Background Masking with Centroids (Part3)
-python Part3.py
-
-
-Loads PennAir 2024 App Dynamic Hard.mp4.
-
-Uses HSV background sampling and masking to isolate shapes.
-
-Draws contours and marks shape centroids.
+- python Part3.py
+- Loads PennAir 2024 App Dynamic Hard.mp4.
+- Uses HSV background sampling and masking to isolate shapes.
+- Draws contours and marks shape centroids.
 
 4. 3D Coordinate Estimation (Part4)
-python Part4.py
-
-
-Loads PennAir 2024 App Dynamic Hard.mp4.
-
-
-Computes approximate 3D position (X, Y, Z) of detected shapes.
-
-Displays coordinates on output.
+- python Part4.py
+- Loads PennAir 2024 App Dynamic Hard.mp4
+- Computes approximate 3D position (X, Y, Z) of detected shapes.
+- Displays coordinates on output.
 
 Controls
-
 Press q while the video window is active to quit.
 
 
