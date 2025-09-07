@@ -65,7 +65,6 @@ while True:
                 cy_px = int(M["m01"] / M["m00"])  # Center in Y direction
                 cv2.circle(output, (cx, cy), 7, (0, 0, 255), -1)
 
-#######         STILL NEED THE COORDINATES CODE
 
     # Show result
     cv2.imshow("Detected Shapes", output)
@@ -75,4 +74,5 @@ while True:
         break
 
 cap.release()
+
 cv2.destroyAllWindows() # Closes everything.
