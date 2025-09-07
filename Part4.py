@@ -4,14 +4,14 @@ import numpy
 # Load video into project
 cap = cv2.VideoCapture("PennAir 2024 App Dynamic Hard.mp4") # Creates a video capture object that will return the frames one by one.
 
-# Background HSV sample (value found using a separate program to sample color from the video)
+# Background HSV sample (value found using a separate blurring program to sample color from the video).
 bg_color = numpy.array([0, 0, 51])
 
-# Camera  matrix values
+# Given camera  matrix values.
 fx = 2564.3186869  # X focal length
 fy = 2569.70273111 # Y focal length
 cx, cy = 0, 0      # Principal point offsets
-R = 10             # Actual circle radius
+R = 10             # Actual circle radius (iunches)
 
 while True:
     ret, frame = cap.read() # Loop will only run if there are more frames left in the video.
@@ -21,7 +21,7 @@ while True:
     output = frame.copy() # Creates another frame copy to make changes to rather than editing the original frame.
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) # Converting to HSV with CV2 "Convert Color" function.
 
-    # Creates a mask for the background. Then invert it to keep only the shapes.
+    # Creates a mask for the background. Then inverts it to keep only the shapes.
     lower = numpy.array([bg_color[0], max(bg_color[0], 0), max(bg_color[2] - 51, 0)]) # Lower color limit for background mask.
     upper = numpy.array([bg_color[0] + 179, min(bg_color[0] + 55, 255), min(bg_color[2] + 100, 255)]) # Upper color limit for background mask.
 
@@ -89,3 +89,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows() # Closes everything.
+
